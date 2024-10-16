@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import java.lang.String?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="main_form" prefHeight="407.0" prefWidth="603.0" styleClass="calque" stylesheets="@Style.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gestion_park_informatique.FXMLDocumentController">
+   <children>
+      <AnchorPane layoutY="1.0" prefHeight="400.0" prefWidth="300.0" styleClass="calque" stylesheets="@Style.css">
+         <children>
+            <Button fx:id="bt_close" layoutX="14.0" layoutY="343.0" mnemonicParsing="false" onAction="#close" styleClass="btnlogin" stylesheets="@Style.css" text="X" textFill="#f20909" />
+            <ImageView fitHeight="346.0" fitWidth="280.0" layoutX="10.0" layoutY="21.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/max.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="300.0" layoutY="11.0" prefHeight="385.0" prefWidth="292.0" stylesheets="@Style.css">
+         <children>
+            <Label layoutX="104.0" layoutY="22.0" text="Login">
+               <font>
+                  <Font name="Gabriola" size="66.0" />
+               </font>
+               <textFill>
+                  <LinearGradient endX="1.0" endY="1.0">
+                     <stops>
+                        <Stop color="#2143b0d8" />
+                        <Stop color="#dd0b0b" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </textFill>
+            </Label>
+            <TextField fx:id="username" layoutX="60.0" layoutY="116.0" prefHeight="35.0" prefWidth="200.0" promptText="Username" styleClass="textfield" stylesheets="@Style.css">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </TextField>
+            <PasswordField fx:id="password" layoutX="60.0" layoutY="160.0" prefHeight="38.0" prefWidth="200.0" promptText="password" styleClass="textfield" stylesheets="@Style.css">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </PasswordField>
+            <Button fx:id="bt_login" layoutX="66.0" layoutY="311.0" mnemonicParsing="false" onAction="#adminLogin" prefHeight="38.0" prefWidth="200.0" styleClass="btnlogin" stylesheets="@Style.css" text="Login">
+               <font>
+                  <Font name="Marlett" size="22.0" />
+               </font>
+            </Button>
+            <CheckBox fx:id="afficer_mdp" layoutX="193.0" layoutY="206.0" mnemonicParsing="false" text="Affichier" />
+            <ComboBox fx:id="login_poste" layoutX="60.0" layoutY="246.0" onAction="#ajoutListePoste" prefHeight="38.0" prefWidth="200.0" promptText="Postes ..." styleClass="textfield" stylesheets="@Style.css" />
+            <FontAwesomeIcon glyphName="USER" layoutX="142.0" layoutY="50.0" size="4em">
+               <fill>
+                  <LinearGradient endX="0.6904761904761905" endY="1.0" startX="0.06190476190476191" startY="0.22380952380952382">
+                     <stops>
+                        <Stop color="#44d78d" />
+                        <Stop color="#d35757" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </fill>
+            </FontAwesomeIcon>
+         </children>
+         <styleClass>
+            <String fx:value="calque" />
+            <String fx:value="shodow" />
+         </styleClass>
+      </AnchorPane>
+   </children>
+</AnchorPane>

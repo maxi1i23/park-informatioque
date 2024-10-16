@@ -1,0 +1,685 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.scene.chart.AreaChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1300.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gestion_park_informatique.utilisateurController">
+   <children>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0">
+         <children>
+            <BorderPane layoutY="7.0" prefHeight="700.0" prefWidth="1300.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <top>
+                  <AnchorPane prefHeight="23.0" prefWidth="1300.0" styleClass="left-form" stylesheets="@Style.css" BorderPane.alignment="CENTER" />
+               </top>
+               <left>
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0" styleClass="left-form" stylesheets="@Style.css" BorderPane.alignment="CENTER">
+                     <children>
+                        <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="26.0" layoutY="-21.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../img/mts2.png" />
+                           </image>
+                        </ImageView>
+                        <Label layoutX="28.0" layoutY="99.0" text="Bienvenue">
+                           <font>
+                              <Font name="Ink Free" size="34.0" />
+                           </font>
+                           <textFill>
+                              <LinearGradient endX="0.13809523809523808" endY="0.8285714285714285" startX="0.0857142857142857" startY="0.12380952380952376">
+                                 <stops>
+                                    <Stop color="#ebe709" />
+                                    <Stop color="#ebf8ff" offset="0.4674329501915708" />
+                                    <Stop color="#1224c7" offset="1.0" />
+                                 </stops>
+                              </LinearGradient>
+                           </textFill>
+                        </Label>
+                        <Label fx:id="acceuil_username" layoutX="70.0" layoutY="146.0" text="koto">
+                           <font>
+                              <Font size="29.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="42.0" layoutY="189.0" text="Utilisateur">
+                           <font>
+                              <Font name="Comic Sans MS" size="23.0" />
+                           </font>
+                           <textFill>
+                              <LinearGradient endX="0.319047619047619" endY="0.861904761904762" startX="0.10476190476190475" startY="0.2714285714285714">
+                                 <stops>
+                                    <Stop color="#e80e06" />
+                                    <Stop color="#e80e06" offset="0.007662835249042145" />
+                                    <Stop color="#b94b4b" offset="0.4674329501915708" />
+                                    <Stop color="#251313" offset="1.0" />
+                                 </stops>
+                              </LinearGradient>
+                           </textFill>
+                        </Label>
+                        <Button fx:id="bt_acceuil" alignment="CENTER" contentDisplay="CENTER" layoutX="4.0" layoutY="285.0" mnemonicParsing="false" onAction="#switchForm" prefHeight="44.0" prefWidth="180.0" styleClass="navbtn" stylesheets="@Style.css" text="Acceuil">
+                           <font>
+                              <Font name="SimSun-ExtB" size="19.0" />
+                           </font>
+                        </Button>
+                        <ImageView fitHeight="38.0" fitWidth="34.0" layoutX="21.0" layoutY="291.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../img/Graphicloads-100-Flat-Home.256.png" />
+                           </image>
+                        </ImageView>
+                        <Button fx:id="bt_demmande" alignment="CENTER" contentDisplay="CENTER" layoutX="7.0" layoutY="340.0" mnemonicParsing="false" onAction="#switchForm" prefHeight="44.0" prefWidth="179.0" styleClass="navbtn" stylesheets="@Style.css" text="Demmande">
+                           <font>
+                              <Font name="SimSun-ExtB" size="19.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="bt_panne" alignment="CENTER" contentDisplay="CENTER" layoutX="4.0" layoutY="394.0" mnemonicParsing="false" onAction="#switchForm" prefHeight="44.0" prefWidth="182.0" styleClass="navbtn" stylesheets="@Style.css" text="Pannes">
+                           <font>
+                              <Font name="SimSun-ExtB" size="19.0" />
+                           </font>
+                        </Button>
+                        <ImageView fitHeight="38.0" fitWidth="34.0" layoutX="21.0" layoutY="346.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../img/Aniket-Suvarna-Box-Regular-Bx-plus-medical.48.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="38.0" fitWidth="34.0" layoutX="21.0" layoutY="401.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../img/software-application.png" />
+                           </image>
+                        </ImageView>
+                        <Button fx:id="bt_deconnecter" alignment="CENTER_RIGHT" layoutX="4.0" layoutY="623.0" mnemonicParsing="false" onAction="#deconnecter" prefHeight="42.0" prefWidth="155.0" styleClass="navbtn" stylesheets="@Style.css" text="deconnecter" textFill="#110101">
+                           <font>
+                              <Font name="Gabriola" size="21.0" />
+                           </font>
+                        </Button>
+                        <ImageView fitHeight="41.0" fitWidth="36.0" layoutX="18.0" layoutY="625.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../img/icone%20fermer.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </AnchorPane>
+               </left>
+               <center>
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <AnchorPane fx:id="acceuil_pannel" layoutX="14.0" layoutY="14.0" prefHeight="677.0" prefWidth="1100.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <AnchorPane layoutX="14.0" layoutY="14.0" prefHeight="237.0" prefWidth="1076.0" stylesheets="@Style.css">
+                                 <styleClass>
+                                    <String fx:value="calque" />
+                                    <String fx:value="shodow" />
+                                 </styleClass>
+                                 <children>
+                                    <AnchorPane layoutX="24.0" layoutY="19.0" prefHeight="200.0" prefWidth="330.0" styleClass="trois-care" stylesheets="@Style.css">
+                                       <children>
+                                          <Label alignment="CENTER" layoutX="44.0" layoutY="9.0" prefHeight="17.0" prefWidth="222.0" text="Matériels">
+                                             <font>
+                                                <Font name="Comic Sans MS" size="39.0" />
+                                             </font>
+                                             <textFill>
+                                                <LinearGradient endX="1.0" endY="1.0" startX="0.23333333333333334" startY="0.004761904761904762">
+                                                   <stops>
+                                                      <Stop color="BLACK" />
+                                                      <Stop color="#13c9ed" offset="0.27491408934707906" />
+                                                      <Stop color="#e3be76" offset="0.6504720148516807" />
+                                                      <Stop color="#ee0808" offset="1.0" />
+                                                   </stops>
+                                                </LinearGradient>
+                                             </textFill>
+                                          </Label>
+                                          <ImageView fitHeight="102.0" fitWidth="85.0" layoutX="29.0" layoutY="100.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../img/computer.png" />
+                                             </image>
+                                          </ImageView>
+                                          <Label fx:id="acceil_ttotal_materie" alignment="CENTER_RIGHT" layoutX="130.0" layoutY="100.0" prefHeight="56.0" prefWidth="186.0" text="0">
+                                             <font>
+                                                <Font name="Impact" size="52.0" />
+                                             </font>
+                                             <textFill>
+                                                <LinearGradient endX="1.0" endY="0.961904761904762" startX="0.2142857142857143">
+                                                   <stops>
+                                                      <Stop color="BLACK" />
+                                                      <Stop color="BLACK" offset="0.06130268199233716" />
+                                                      <Stop color="#17d334" offset="0.40901370620531635" />
+                                                      <Stop color="#83bc8f" offset="0.6772919382233282" />
+                                                      <Stop color="#dd9090" offset="1.0" />
+                                                   </stops>
+                                                </LinearGradient>
+                                             </textFill>
+                                          </Label>
+                                       </children></AnchorPane>
+                                    <AnchorPane layoutX="377.0" layoutY="19.0" prefHeight="200.0" prefWidth="330.0" styleClass="trois-care" stylesheets="@Style.css">
+                                       <children>
+                                          <Label fx:id="acceuil_total_pane" alignment="CENTER_RIGHT" layoutX="113.0" layoutY="100.0" prefHeight="56.0" prefWidth="186.0" text="0">
+                                             <font>
+                                                <Font name="Impact" size="52.0" />
+                                             </font>
+                                             <textFill>
+                                                <LinearGradient endX="1.0" endY="0.961904761904762" startX="0.2142857142857143">
+                                                   <stops>
+                                                      <Stop color="#d70707" />
+                                                      <Stop color="#d70707" offset="0.06513409961685823" />
+                                                      <Stop color="#e8910f" offset="0.41284512382983735" />
+                                                      <Stop color="#e46d6d" offset="0.6772919382233282" />
+                                                      <Stop color="#8ec9bb" offset="1.0" />
+                                                   </stops>
+                                                </LinearGradient>
+                                             </textFill>
+                                          </Label>
+                                          <Label alignment="CENTER" layoutX="37.0" layoutY="8.0" prefHeight="17.0" prefWidth="222.0" text="Pannes">
+                                             <font>
+                                                <Font name="Comic Sans MS" size="39.0" />
+                                             </font>
+                                             <textFill>
+                                                <LinearGradient endX="1.0" endY="1.0" startX="0.23333333333333334" startY="0.004761904761904762">
+                                                   <stops>
+                                                      <Stop color="BLACK" />
+                                                      <Stop color="#13c9ed" offset="0.27491408934707906" />
+                                                      <Stop color="#e3be76" offset="0.6504720148516807" />
+                                                      <Stop color="#ee0808" offset="1.0" />
+                                                   </stops>
+                                                </LinearGradient>
+                                             </textFill>
+                                          </Label>
+                                          <ImageView fitHeight="78.0" fitWidth="75.0" layoutX="38.0" layoutY="95.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../img/software-application.png" />
+                                             </image>
+                                          </ImageView>
+                                       </children></AnchorPane>
+                                    <AnchorPane layoutX="730.0" layoutY="19.0" prefHeight="200.0" prefWidth="330.0" styleClass="trois-care" stylesheets="@Style.css">
+                                       <children>
+                                          <Label fx:id="acceuil_total_demmande" alignment="CENTER_RIGHT" layoutX="117.0" layoutY="100.0" prefHeight="56.0" prefWidth="186.0" text="0">
+                                             <font>
+                                                <Font name="Impact" size="52.0" />
+                                             </font>
+                                             <textFill>
+                                                <LinearGradient endX="0.9476190476190476" endY="0.923809523809524" startX="0.2142857142857143" startY="0.023809523809523808">
+                                                   <stops>
+                                                      <Stop color="#d40b0b" />
+                                                      <Stop color="#5c8597" offset="0.3055654303432472" />
+                                                      <Stop color="#293f5b" offset="0.6849547734723701" />
+                                                      <Stop color="#0d0101" offset="1.0" />
+                                                   </stops>
+                                                </LinearGradient>
+                                             </textFill>
+                                          </Label>
+                                          <Label alignment="CENTER" layoutX="44.0" layoutY="7.0" prefHeight="17.0" prefWidth="222.0" text="Demmandes">
+                                             <font>
+                                                <Font name="Comic Sans MS" size="39.0" />
+                                             </font>
+                                             <textFill>
+                                                <LinearGradient endX="1.0" endY="1.0" startX="0.23333333333333334" startY="0.004761904761904762">
+                                                   <stops>
+                                                      <Stop color="BLACK" />
+                                                      <Stop color="#13c9ed" offset="0.27491408934707906" />
+                                                      <Stop color="#e3be76" offset="0.6504720148516807" />
+                                                      <Stop color="#ee0808" offset="1.0" />
+                                                   </stops>
+                                                </LinearGradient>
+                                             </textFill>
+                                          </Label>
+                                          <ImageView fitHeight="76.0" fitWidth="82.0" layoutX="44.0" layoutY="95.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../img/blocnote.png" />
+                                             </image>
+                                          </ImageView>
+                                       </children></AnchorPane>
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane layoutX="13.0" layoutY="264.0" prefHeight="404.0" prefWidth="1076.0" stylesheets="@Style.css">
+                                 <styleClass>
+                                    <String fx:value="calque" />
+                                    <String fx:value="shodow" />
+                                 </styleClass>
+                                 <children>
+                                    <AreaChart layoutX="43.0" layoutY="20.0" prefHeight="362.0" prefWidth="982.0">
+                                      <xAxis>
+                                        <CategoryAxis side="BOTTOM" />
+                                      </xAxis>
+                                      <yAxis>
+                                        <NumberAxis side="LEFT" />
+                                      </yAxis>
+                                    </AreaChart>
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane fx:id="demmande_pannel" prefHeight="677.0" prefWidth="1100.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <AnchorPane layoutX="18.0" layoutY="14.0" prefHeight="323.0" prefWidth="1068.0" stylesheets="@Style.css">
+                                 <styleClass>
+                                    <String fx:value="calque" />
+                                    <String fx:value="shodow" />
+                                 </styleClass>
+                                 <children>
+                                    <TableView fx:id="materiel_table" layoutX="7.0" layoutY="11.0" onMouseClicked="#afficherMateriel" prefHeight="302.0" prefWidth="1053.0" stylesheets="@Style.css">
+                                       <columns>
+                                          <TableColumn fx:id="materiel_table_col_id" prefWidth="38.0" text="id" />
+                                          <TableColumn fx:id="materiel_table_col_type" prefWidth="166.0" text="type" />
+                                          <TableColumn fx:id="materiel_table_col_marque" prefWidth="184.0" text="marque" />
+                                          <TableColumn fx:id="materiel_table_col_num" prefWidth="112.0" text="N° de serie" />
+                                          <TableColumn fx:id="materiel_table_col_model" prefWidth="190.0" text="model" />
+                                          <TableColumn fx:id="materiel_table_col_status" prefWidth="130.0" text="Status" />
+                                          <TableColumn fx:id="materiel_table_col_system" prefWidth="231.0" text="System" />
+                                       </columns>
+                                       <styleClass>
+                                          <String fx:value="column-header-background" />
+                                          <String fx:value="column-header-filter" />
+                                          <String fx:value="column-header-label" />
+                                          <String fx:value="table-view" />
+                                       </styleClass>
+                                    </TableView>
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane layoutX="18.0" layoutY="348.0" prefHeight="315.0" prefWidth="1069.0" stylesheets="@Style.css">
+                                 <styleClass>
+                                    <String fx:value="calque" />
+                                    <String fx:value="shodow" />
+                                 </styleClass>
+                                 <children>
+                                    <ImageView fitHeight="30.0" fitWidth="25.0" layoutX="14.0" layoutY="18.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../img/rechrecher.png" />
+                                       </image>
+                                    </ImageView>
+                                    <TextField fx:id="materiel_recherche" layoutX="43.0" layoutY="14.0" onKeyTyped="#rechercheTableMateriel" prefHeight="35.0" prefWidth="256.0" promptText="Recherche" />
+                                    <Label layoutX="79.0" layoutY="64.0" prefHeight="31.0" prefWidth="38.0" text="Id :">
+                                       <font>
+                                          <Font name="Comic Sans MS" size="21.0" />
+                                       </font>
+                                       <textFill>
+                                          <LinearGradient endX="1.0" endY="1.0">
+                                             <stops>
+                                                <Stop color="#2886ebf2" />
+                                                <Stop color="#2886ebf2" offset="0.007662835249042145" />
+                                                <Stop color="#dd4444" offset="1.0" />
+                                             </stops>
+                                          </LinearGradient>
+                                       </textFill>
+                                    </Label>
+                                    <Label fx:id="materiel_id" layoutX="133.0" layoutY="60.0" prefHeight="38.0" prefWidth="166.0">
+                                       <font>
+                                          <Font name="Comic Sans MS Bold" size="19.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="57.0" layoutY="103.0" prefHeight="31.0" prefWidth="63.0" text="Type :">
+                                       <font>
+                                          <Font name="Comic Sans MS" size="21.0" />
+                                       </font>
+                                       <textFill>
+                                          <LinearGradient endX="1.0" endY="1.0">
+                                             <stops>
+                                                <Stop color="#2886ebf2" />
+                                                <Stop color="#2886ebf2" offset="0.007662835249042145" />
+                                                <Stop color="#dd4444" offset="1.0" />
+                                             </stops>
+                                          </LinearGradient>
+                                       </textFill>
+                                    </Label>
+                                    <Label fx:id="materiel_type" layoutX="133.0" layoutY="100.0" prefHeight="38.0" prefWidth="201.0">
+                                       <font>
+                                          <Font name="Comic Sans MS Bold" size="19.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="43.0" layoutY="143.0" prefHeight="31.0" prefWidth="81.0" text="Marque:">
+                                       <font>
+                                          <Font name="Corbel" size="21.0" />
+                                       </font>
+                                       <textFill>
+                                          <LinearGradient endX="1.0" endY="1.0">
+                                             <stops>
+                                                <Stop color="#2886ebf2" />
+                                                <Stop color="#2886ebf2" offset="0.007662835249042145" />
+                                                <Stop color="#dd4444" offset="1.0" />
+                                             </stops>
+                                          </LinearGradient>
+                                       </textFill>
+                                    </Label>
+                                    <Label layoutX="43.0" layoutY="185.0" prefHeight="31.0" prefWidth="84.0" text="N° serie:">
+                                       <font>
+                                          <Font name="Ebrima" size="21.0" />
+                                       </font>
+                                       <textFill>
+                                          <LinearGradient endX="1.0" endY="1.0">
+                                             <stops>
+                                                <Stop color="#2886ebf2" />
+                                                <Stop color="#2886ebf2" offset="0.007662835249042145" />
+                                                <Stop color="#dd4444" offset="1.0" />
+                                             </stops>
+                                          </LinearGradient>
+                                       </textFill>
+                                    </Label>
+                                    <Label fx:id="materiel_marque" layoutX="133.0" layoutY="140.0" prefHeight="38.0" prefWidth="200.0">
+                                       <font>
+                                          <Font name="Comic Sans MS Bold" size="19.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="46.0" layoutY="232.0" prefHeight="31.0" prefWidth="74.0" text="Model :">
+                                       <font>
+                                          <Font size="21.0" />
+                                       </font>
+                                       <textFill>
+                                          <LinearGradient endX="1.0" endY="1.0">
+                                             <stops>
+                                                <Stop color="#2886ebf2" />
+                                                <Stop color="#2886ebf2" offset="0.007662835249042145" />
+                                                <Stop color="#dd4444" offset="1.0" />
+                                             </stops>
+                                          </LinearGradient>
+                                       </textFill>
+                                    </Label>
+                                    <Label fx:id="materiel_numserie" layoutX="133.0" layoutY="183.0" prefHeight="38.0" prefWidth="208.0">
+                                       <font>
+                                          <Font name="Comic Sans MS Bold" size="19.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="43.0" layoutY="271.0" prefHeight="31.0" prefWidth="74.0" text="System:">
+                                       <font>
+                                          <Font size="21.0" />
+                                       </font>
+                                       <textFill>
+                                          <LinearGradient endX="1.0" endY="1.0">
+                                             <stops>
+                                                <Stop color="#2886ebf2" />
+                                                <Stop color="#2886ebf2" offset="0.007662835249042145" />
+                                                <Stop color="#dd4444" offset="1.0" />
+                                             </stops>
+                                          </LinearGradient>
+                                       </textFill>
+                                    </Label>
+                                    <Label fx:id="materiel_model" layoutX="133.0" layoutY="229.0" prefHeight="38.0" prefWidth="226.0">
+                                       <font>
+                                          <Font name="Comic Sans MS Bold" size="19.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="materiel_system" layoutX="128.0" layoutY="267.0" prefHeight="38.0" prefWidth="239.0">
+                                       <font>
+                                          <Font name="Comic Sans MS Bold" size="19.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="445.0" layoutY="61.0" prefHeight="26.0" prefWidth="44.0" text="Nom">
+                                       <font>
+                                          <Font name="Impact" size="22.0" />
+                                       </font>
+                                       <textFill>
+                                          <LinearGradient endX="1.0" endY="1.0">
+                                             <stops>
+                                                <Stop color="#46c644f2" />
+                                                <Stop color="#46c644f2" offset="0.007662835249042145" />
+                                                <Stop color="#6b2c2c" offset="1.0" />
+                                             </stops>
+                                          </LinearGradient>
+                                       </textFill>
+                                    </Label>
+                                    <Label layoutX="396.0" layoutY="107.0" prefHeight="28.0" prefWidth="93.0" text="Matricule">
+                                       <font>
+                                          <Font name="Impact" size="22.0" />
+                                       </font>
+                                       <textFill>
+                                          <LinearGradient endX="1.0" endY="1.0">
+                                             <stops>
+                                                <Stop color="#46c644f2" />
+                                                <Stop color="#46c644f2" offset="0.007662835249042145" />
+                                                <Stop color="#6b2c2c" offset="1.0" />
+                                             </stops>
+                                          </LinearGradient>
+                                       </textFill>
+                                    </Label>
+                                    <Label layoutX="433.0" layoutY="161.0" prefHeight="28.0" prefWidth="60.0" text="Poste">
+                                       <font>
+                                          <Font name="Impact" size="22.0" />
+                                       </font>
+                                       <textFill>
+                                          <LinearGradient endX="1.0" endY="1.0">
+                                             <stops>
+                                                <Stop color="#46c644f2" />
+                                                <Stop color="#46c644f2" offset="0.007662835249042145" />
+                                                <Stop color="#6b2c2c" offset="1.0" />
+                                             </stops>
+                                          </LinearGradient>
+                                       </textFill>
+                                    </Label>
+                                    <Label layoutX="431.0" layoutY="213.0" prefHeight="28.0" prefWidth="55.0" text="porte">
+                                       <font>
+                                          <Font name="Impact" size="22.0" />
+                                       </font>
+                                       <textFill>
+                                          <LinearGradient endX="1.0" endY="1.0">
+                                             <stops>
+                                                <Stop color="#46c644f2" />
+                                                <Stop color="#46c644f2" offset="0.007662835249042145" />
+                                                <Stop color="#6b2c2c" offset="1.0" />
+                                             </stops>
+                                          </LinearGradient>
+                                       </textFill>
+                                    </Label>
+                                    <TextField fx:id="dmd_nom" layoutX="511.0" layoutY="58.0" prefHeight="37.0" prefWidth="212.0" styleClass="textfield" stylesheets="@Style.css" />
+                                    <TextField fx:id="dmd_matricule" layoutX="511.0" layoutY="107.0" prefHeight="37.0" prefWidth="212.0" styleClass="textfield" stylesheets="@Style.css" />
+                                    <TextField fx:id="dmd_porte" layoutX="510.0" layoutY="209.0" prefHeight="38.0" prefWidth="212.0" styleClass="textfield" stylesheets="@Style.css" />
+                                    <ComboBox fx:id="dmd_poste" layoutX="511.0" layoutY="158.0" onAction="#ajoutListePoste" prefHeight="37.0" prefWidth="212.0" styleClass="textfield" stylesheets="@Style.css" />
+                                    <Button fx:id="dmd_bt_actualiser" alignment="CENTER_RIGHT" layoutX="871.0" layoutY="63.0" mnemonicParsing="false" onAction="#actualiserdemmande" prefHeight="43.0" prefWidth="154.0" styleClass="bt-modifier" stylesheets="@Style.css" text="actualiser">
+                                       <font>
+                                          <Font size="17.0" />
+                                       </font>
+                                    </Button>
+                                    <ImageView fitHeight="35.0" fitWidth="36.0" layoutX="881.0" layoutY="67.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../img/Actualiser.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Button fx:id="dmd_bt_lancer" alignment="CENTER_RIGHT" layoutX="871.0" layoutY="129.0" mnemonicParsing="false" onAction="#ajoutDemmandeAdd" prefHeight="44.0" prefWidth="154.0" styleClass="bt-ajouter" stylesheets="@Style.css" text="Lancer">
+                                       <font>
+                                          <Font size="17.0" />
+                                       </font>
+                                    </Button>
+                                    <ImageView fitHeight="35.0" fitWidth="36.0" layoutX="881.0" layoutY="135.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../img/iconea%20jouter.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Label layoutX="401.0" layoutY="264.0" prefHeight="28.0" prefWidth="84.0" text="Message">
+                                       <font>
+                                          <Font name="Impact" size="22.0" />
+                                       </font>
+                                       <textFill>
+                                          <LinearGradient endX="1.0" endY="1.0">
+                                             <stops>
+                                                <Stop color="#46c644f2" />
+                                                <Stop color="#46c644f2" offset="0.007662835249042145" />
+                                                <Stop color="#6b2c2c" offset="1.0" />
+                                             </stops>
+                                          </LinearGradient>
+                                       </textFill>
+                                    </Label>
+                                    <TextField fx:id="dmd_message" layoutX="509.0" layoutY="260.0" prefHeight="38.0" prefWidth="212.0" styleClass="textfield" stylesheets="@Style.css" />
+                                    <TableView fx:id="demmande_table" layoutX="637.0" layoutY="187.0" prefHeight="121.0" prefWidth="411.0" visible="false">
+                                      <columns>
+                                        <TableColumn fx:id="demmande_table_col_id" prefWidth="27.0" text="C1" />
+                                        <TableColumn fx:id="demmande_table_col_type" prefWidth="31.0" text="C2" />
+                                          <TableColumn fx:id="demmande_table_col_marque" prefWidth="31.0" text="C2" />
+                                          <TableColumn fx:id="demmande_table_col_num_serie" prefWidth="31.0" text="C2" />
+                                          <TableColumn fx:id="demmande_table_col_model" prefWidth="31.0" text="C2" />
+                                          <TableColumn fx:id="demmande_table_col_system" prefWidth="31.0" text="C2" />
+                                          <TableColumn fx:id="demmande_table_col_nom" prefWidth="31.0" text="C2" />
+                                          <TableColumn fx:id="demmande_table_col_matricule" prefWidth="31.0" text="C2" />
+                                          <TableColumn fx:id="demmande_table_col_poste" prefWidth="31.0" text="C2" />
+                                          <TableColumn fx:id="demmande_table_col_porte" prefWidth="31.0" text="C2" />
+                                          <TableColumn fx:id="demmande_table_col_message" prefWidth="31.0" text="C2" />
+                                      </columns>
+                                    </TableView>
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane fx:id="panne_pannel" prefHeight="677.0" prefWidth="1100.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <AnchorPane layoutX="21.0" layoutY="14.0" prefHeight="652.0" prefWidth="424.0" stylesheets="@Style.css">
+                                 <styleClass>
+                                    <String fx:value="calque" />
+                                    <String fx:value="shodow" />
+                                 </styleClass>
+                                 <children>
+                                    <Label layoutX="43.0" layoutY="1.0" text="Declarartion de panne ">
+                                       <font>
+                                          <Font name="Segoe Print Bold" size="31.0" />
+                                       </font>
+                                       <textFill>
+                                          <LinearGradient endX="1.0" endY="1.0">
+                                             <stops>
+                                                <Stop color="BLACK" />
+                                                <Stop color="#3ee86e" offset="0.31883714500138227" />
+                                                <Stop color="#32acbf" offset="0.6434016668641624" />
+                                                <Stop color="#eb0c0c" offset="1.0" />
+                                             </stops>
+                                          </LinearGradient>
+                                       </textFill>
+                                    </Label>
+                                    <Label layoutX="105.0" layoutY="142.0" text="id">
+                                       <font>
+                                          <Font size="26.0" />
+                                       </font>
+                                       <textFill>
+                                          <LinearGradient endX="1.0" endY="1.0">
+                                             <stops>
+                                                <Stop color="BLACK" />
+                                                <Stop color="#eb0c0c" offset="1.0" />
+                                             </stops>
+                                          </LinearGradient>
+                                       </textFill>
+                                    </Label>
+                                    <TextField fx:id="panne_id" layoutX="133.0" layoutY="141.0" prefHeight="39.0" prefWidth="269.0" styleClass="textfield" stylesheets="@Style.css" />
+                                    <Label layoutX="73.0" layoutY="193.0" text="nom ">
+                                       <font>
+                                          <Font size="26.0" />
+                                       </font>
+                                       <textFill>
+                                          <LinearGradient endX="1.0" endY="1.0">
+                                             <stops>
+                                                <Stop color="BLACK" />
+                                                <Stop color="#eb0c0c" offset="1.0" />
+                                             </stops>
+                                          </LinearGradient>
+                                       </textFill>
+                                    </Label>
+                                    <TextField fx:id="panne_materiel" layoutX="132.0" layoutY="193.0" prefHeight="39.0" prefWidth="270.0" styleClass="textfield" stylesheets="@Style.css" />
+                                    <Label layoutX="37.0" layoutY="249.0" text="N° serie">
+                                       <font>
+                                          <Font size="26.0" />
+                                       </font>
+                                       <textFill>
+                                          <LinearGradient endX="1.0" endY="1.0">
+                                             <stops>
+                                                <Stop color="BLACK" />
+                                                <Stop color="#eb0c0c" offset="1.0" />
+                                             </stops>
+                                          </LinearGradient>
+                                       </textFill>
+                                    </Label>
+                                    <TextField fx:id="panne_serie" layoutX="132.0" layoutY="248.0" prefHeight="39.0" prefWidth="270.0" styleClass="textfield" stylesheets="@Style.css" />
+                                    <Label layoutX="1.0" layoutY="303.0" text="déclaration">
+                                       <font>
+                                          <Font size="26.0" />
+                                       </font>
+                                       <textFill>
+                                          <LinearGradient endX="1.0" endY="1.0">
+                                             <stops>
+                                                <Stop color="BLACK" />
+                                                <Stop color="#eb0c0c" offset="1.0" />
+                                             </stops>
+                                          </LinearGradient>
+                                       </textFill>
+                                    </Label>
+                                    <TextField fx:id="panne_declaration" layoutX="132.0" layoutY="302.0" prefHeight="39.0" prefWidth="270.0" styleClass="textfield" stylesheets="@Style.css" />
+                                    <Label layoutX="72.0" layoutY="416.0" text="nom">
+                                       <font>
+                                          <Font size="26.0" />
+                                       </font>
+                                       <textFill>
+                                          <LinearGradient endX="1.0" endY="1.0">
+                                             <stops>
+                                                <Stop color="BLACK" />
+                                                <Stop color="#eb0c0c" offset="1.0" />
+                                             </stops>
+                                          </LinearGradient>
+                                       </textFill>
+                                    </Label>
+                                    <TextField fx:id="panne_nom" layoutX="132.0" layoutY="415.0" prefHeight="39.0" prefWidth="270.0" styleClass="textfield" stylesheets="@Style.css" />
+                                    <TextField fx:id="panne_matricule" layoutX="132.0" layoutY="472.0" prefHeight="39.0" prefWidth="270.0" styleClass="textfield" stylesheets="@Style.css" />
+                                    <Label layoutX="18.0" layoutY="470.0" text="matricule">
+                                       <font>
+                                          <Font size="26.0" />
+                                       </font>
+                                       <textFill>
+                                          <LinearGradient endX="1.0" endY="1.0">
+                                             <stops>
+                                                <Stop color="BLACK" />
+                                                <Stop color="#eb0c0c" offset="1.0" />
+                                             </stops>
+                                          </LinearGradient>
+                                       </textFill>
+                                    </Label>
+                                    <Button fx:id="bt_envoyer_panne" layoutX="132.0" layoutY="594.0" mnemonicParsing="false" onAction="#ajoutPanneAdd" prefHeight="43.0" prefWidth="222.0" styleClass="bt-ajouter" stylesheets="@Style.css" text="Envoyer">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                    </Button>
+                                    <ImageView fitHeight="39.0" fitWidth="43.0" layoutX="152.0" layoutY="596.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../img/Aha-Soft-3d-Social-Plus.512.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Label layoutX="18.0" layoutY="106.0" text="Information sur le matériel">
+                                       <font>
+                                          <Font name="Ink Free" size="12.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="18.0" layoutY="385.0" text="Information sur le déclarateur">
+                                       <font>
+                                          <Font name="Ink Free" size="12.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane layoutX="466.0" layoutY="14.0" prefHeight="651.0" prefWidth="619.0" stylesheets="@Style.css">
+                                 <styleClass>
+                                    <String fx:value="calque" />
+                                    <String fx:value="shodow" />
+                                 </styleClass>
+                                 <children>
+                                    <TableView fx:id="table_panne" layoutX="101.0" layoutY="95.0" prefHeight="200.0" prefWidth="458.0" visible="false">
+                                      <columns>
+                                        <TableColumn fx:id="table_panne_col_id" prefWidth="75.0" text="id" />
+                                        <TableColumn fx:id="table_panne_col_nom_materiel" prefWidth="75.0" text="nom matériel" />
+                                          <TableColumn fx:id="table_panne_col_numserie_materiel" prefWidth="75.0" text="N° de serie" />
+                                          <TableColumn fx:id="table_panne_col_declaration_materiel" prefWidth="75.0" text="declaration" />
+                                          <TableColumn fx:id="table_panne_col_nom" prefWidth="75.0" text="nom de declarateur" />
+                                          <TableColumn fx:id="table_panne_col_matricule" prefWidth="75.0" text="matricule" />
+                                      </columns>
+                                    </TableView>
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </AnchorPane>
+               </center>
+            </BorderPane>
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>

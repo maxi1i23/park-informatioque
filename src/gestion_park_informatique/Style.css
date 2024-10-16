@@ -1,0 +1,149 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/CascadeStyleSheet.css to edit this template
+*/
+/* 
+    Created on : 25 juil. 2024, 18:14:46
+    Author     : Miandry
+*/
+
+.ring-form{
+    -fx-background-color: #fff;
+
+    -fx-border-width: .4px .4px .4px 0px;
+}
+
+.left-form{
+    -fx-background-color: linear-gradient(to bottom right,#66ab8f, #c5745b ); 
+
+    -fx-border-width: .4px .4px .4px 0px;
+}
+.textfield{
+    -fx-background-color: #fff;
+    -fx-background-radius:  4px;
+    -fx-border-color:#66ab8f;
+    -fx-border-radius: 4px;
+    -fx-font-size:14px;
+    -fx-font-family:"Tahoma";
+
+}
+.textfield:focused{
+    -fx-border-color: red;
+    -fx-border-width: 1.5px;
+}
+
+.btnlogin{
+    -fx-background-color:cadetblue ;
+    -fx-background-radius:  20px;
+    -fx-font-size:14px;
+    -fx-font-family:"Tahoma";
+}
+
+.btnlogin:hover{
+    -fx-background-color:linear-gradient(to bottom right,#e7d96d, #c5745b ) ;
+    -fx-background-radius:  20px;
+    -fx-font-size:28px;
+    -fx-font-family:"Sitka Display";
+}
+
+
+
+
+/////////           DASBORD           ///////////
+
+// bouton de navigation
+
+
+.navbtn{
+    //-fx-background-color:linear-gradient(to bottom right,#66ab8f, #c5745b); 
+    -fx-background-color:transparent;
+    -fx-cursor:hand; 
+    -fx-border-radius: 8px;
+    -fx-background-radius: 10px;
+}
+
+.navbtn:hover{
+    -fx-background-color: #c5745b ;
+
+}
+.shodow{
+    -fx-effect:dropshadow(three-pass-box, rgba(0,0,0,0.5), 8,0,0,0);
+}
+.bt_lougout{
+    -fx-background-color: transparent;
+    -fx-cursor: hand;
+}
+
+.calque{
+    -fx-background-color: #fff;
+    -fx-background-radius:6px;
+    -fx-border-width: .4px .4px .4px 4px;
+}
+
+.trois-care{// acceil
+    -fx-background-color:linear-gradient(to bottom right,#dd9090, #66ab8f); 
+    
+    -fx-background-radius:6px;
+}
+
+.table-view{
+    -fx-padding: 0px;
+    -fx-background-color: transparent;
+    -fx-border-color: linear-gradient(to bottom right,#66ab8f, #c5745b );
+    -fx-border-width: 2px;
+    -fx-border-radius: 8px 8px 0px 0px;
+    
+}
+
+.table-view .column-header-background{
+    -fx-background-color: linear-gradient(to bottom right,#66ab8f, #c5745b );
+    -fx-background-insets: 0 0 0 0;
+    -fx-background-radius: 8px 8px 0px 0px;
+    
+}
+.table-view .column-header, .filter{
+    -fx-background-color: transparent;
+    -fx-size:40px;
+}
+.table-view .column-header .label{
+    -fx-text-fill: #fff;
+    -fx-font-family:"Arial"; 
+}
+.bt-ajouter{
+     -fx-background-color: #a1eea4;
+     -fx-background-radius: 8px;
+     -fx-cursor: hand;
+     -fx-font-size:12px;
+     -fx-text-fill: #fff;
+}
+.bt-ajouter:hover{
+    -fx-background-color: #03ee0b;
+    -fx-text-fill: black;
+     -fx-font-size:14px;
+}
+
+.bt-modifier{
+     -fx-background-color: #88eff1;
+     -fx-background-radius: 8px;
+     -fx-cursor: hand;
+     -fx-font-size:12px;
+     -fx-text-fill: #fff;
+}
+.bt-modifier:hover{
+    -fx-background-color: #398ff1;
+    -fx-text-fill: black;
+     -fx-font-size:14px;
+}
+
+.bt-suprimer{
+     -fx-background-color: #f19e9e;
+     -fx-background-radius: 8px;
+     -fx-cursor: hand;
+     -fx-font-size:12px;
+     -fx-text-fill: #fff;
+}
+.bt-suprimer:hover{
+    -fx-background-color: #f40505;
+    -fx-text-fill: black;
+     -fx-font-size:14px;
+}
